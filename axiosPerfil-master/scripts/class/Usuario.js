@@ -1,6 +1,6 @@
 export default class Usuario{
 
-    url = 'http://localhost:4000/usuarios/';
+    url = 'http://localhost:3000/usuarios/';
 
     constructor(nombre, apellido, correo){
         this.nombre = nombre,
@@ -18,7 +18,7 @@ export default class Usuario{
     buscarPerfil(email){
         return axios.get(this.url)
        .then(({data}) => {
-           //console.log(data.find(user => user.correo === email))
+           console.log(data.find(user => user.correo === email))
            localStorage.setItem('Buscado',JSON.stringify(data.find(user => user.correo === email)))
        })
     }
@@ -30,7 +30,7 @@ export default class Usuario{
     }
 
     eliminarPerfil(id){
-        axios.put(this.url+id)
+        axios.delete(this.url+id)
         .then(data => console.log(data))
         .catch(console.warn)
     }

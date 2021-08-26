@@ -1,16 +1,11 @@
 {
   "usuarios": [
+    
     {
-      "url": "http://localhost:4000/usuarios/",
-      "nombre": "John David",
-      "apellido": "Betancur Román",
+      "url": "http://localhost:3000/usuarios/",
+      "nombre": "david",
+      "apellido": "galvis",
       "correo": "david@gmail.com",
-      "id": 1
-    },
-    {
-      "id": 2
-    },
-    {
       "id": 3
     }
   ]
